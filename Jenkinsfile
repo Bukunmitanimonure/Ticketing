@@ -8,4 +8,18 @@ pipeline {
         git 'https://github.com/Bukunmitanimonure/Ticketing.git'
       }
     }
+     
+    stage('Install dependencies') {
+      steps {
+        sh 'npm install'
+      }
+    }  
+    
+            
+    stage('Test') {
+      steps {
+        sh 'npm run test'
+      }
+    }
+  }
 }
