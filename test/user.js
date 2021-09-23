@@ -27,5 +27,9 @@ describe('Users', () => {
                done();
             })
         })
-    })
+    });
+    afterEach(done => {
+        mongoose.connection.close();
+        done();
+    });
 })
