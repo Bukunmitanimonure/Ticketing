@@ -1,24 +1,12 @@
 pipeline {
   agent any
-    
+ 
+  tools {nodejs "node"}
+ 
   stages {
-        
-    stage('Git') {
+    stage('Example') {
       steps {
-        git 'https://github.com/Bukunmitanimonure/Ticketing.git'
-      }
-    }
-     
-    stage('Install dependencies') {
-      steps {
-        sh 'npm install'
-      }
-    }  
-    
-            
-    stage('Test') {
-      steps {
-        sh 'npm run test'
+        sh 'npm config ls'
       }
     }
   }
