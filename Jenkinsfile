@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { label 'master' }
     
   stages {
         
@@ -11,7 +11,7 @@ pipeline {
      
     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        sh "/usr/bin/npm install"
       }
     }  
     
