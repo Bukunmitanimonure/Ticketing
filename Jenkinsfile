@@ -4,7 +4,7 @@ pipeline {
   tools {nodejs "node"}
  
   stages {
-    stage('Example') {
+    stage('Check npm config') {
       steps {
         sh 'npm config ls'
       }
